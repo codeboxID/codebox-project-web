@@ -44,6 +44,7 @@ function searchList(itemSearch , description , itemOpen , action){
     });
   }
   item.className = "item"
+  item.onclick = noPost
   itemList.appendChild(item)
 
   let itemTitle = document.createElement("h3")
@@ -58,7 +59,11 @@ function searchList(itemSearch , description , itemOpen , action){
 }
 
 searchContainer()
-searchList("ytdl-core" , "(app)" , "https://codebox.my.id" , "_self")
+searchList("NO POST" , "(belum ada apa apa di sini web testing)" , "#" , "_self")
+
+function noPost() {
+  alert("kaga ada apa-apa bre ga usah di klik")
+}
 
 function navigasiIcon(title, link, action, alt, src, fungsi) {
   let navLinkWithIcon = document.createElement("div")
@@ -84,7 +89,7 @@ function navigasiIcon(title, link, action, alt, src, fungsi) {
 const myWeb = "https://codebox.my.id"
 const discordInvite = "https://dc.codebox.my.id/"
 
-// Memanggil fungsi navigasiIcon tanpa menyimpan nilai konstan
+
 navigasiIcon("HOME", myWeb, "_self", "home", "https://img.codebox.my.id/home.png",)
 navigasiIcon("Full Screen", "", "", "full screen", "https://img.codebox.my.id/fullScreen.png", openFullScreen)
 navigasiIcon("","","","search","https://img.codebox.my.id/search.png",openSearch)
