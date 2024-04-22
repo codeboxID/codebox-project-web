@@ -7,7 +7,7 @@ overlay.id = "myOverlay";
 overlay.className = "overlay";
 document.body.appendChild(overlay)
 
-// Mengubah `itemList` menjadi variabel global di luar fungsi
+
 const itemList = document.createElement("div")
 itemList.className = "itemList"
 itemList.id = "itemList"
@@ -44,6 +44,7 @@ function searchList(itemSearch , description , itemOpen , action){
     });
   }
   item.className = "item"
+  item.onclick = test
   itemList.appendChild(item)
 
   let itemTitle = document.createElement("h3")
@@ -58,7 +59,11 @@ function searchList(itemSearch , description , itemOpen , action){
 }
 
 searchContainer()
-searchList("ytdl-core" , "(app)" , "https://codebox.my.id" , "_self")
+searchList("No post" , "(mohon maaf belum ada apa apa)" , "#" , "_self")
+
+function test() {
+  alert("blum ada apa apa bro jangan di klik")
+};
 
 function navigasiIcon(title, link, action, alt, src, fungsi) {
   let navLinkWithIcon = document.createElement("div")
