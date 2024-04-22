@@ -3,9 +3,15 @@ nav.className = "icon-bar";
 document.body.appendChild(nav)
 
 const overlay = document.createElement("div")
-  overlay.id = "myOverlay";
-  overlay.className = "overlay";
-  document.body.appendChild(overlay)
+overlay.id = "myOverlay";
+overlay.className = "overlay";
+document.body.appendChild(overlay)
+
+// Mengubah `itemList` menjadi variabel global di luar fungsi
+const itemList = document.createElement("div")
+itemList.className = "itemList"
+itemList.id = "itemList"
+overlay.appendChild(itemList);
 
 function searchContainer(){
   let closeButton = document.createElement("span")
@@ -27,12 +33,6 @@ function searchContainer(){
   formInputSearch.type = "text";
   formInputSearch.placeholder = "search...";
   formSearch.appendChild(formInputSearch)
-
-  let itemList = document.createElement("div")
-  itemList.className = "itemList"
-  itemList.id = "itemList"
-  overlay.appendChild(itemList)
-  
 }
 
 function searchList(itemSearch , description , itemOpen , action){
@@ -79,18 +79,17 @@ function navigasiIcon(title, link, action, alt, src, fungsi) {
   navIcon.alt = alt
   navIcon.src = src
   navLinkWithIcon.appendChild(navIcon)
-
 }
 
 const myWeb = "https://codebox.my.id"
 const discordInvite = "https://dc.codebox.my.id/"
 
-const home = navigasiIcon("HOME", myWeb, "_self", "home", "/img/home.png")
-const fullScreen = navigasiIcon("Full Screen", "", "", "full screen", "/img/fullScreen.png", openFullScreen)
-const search = navigasiIcon("","","","search","/img/search.png",openSearch)
-const back = navigasiIcon("back", "", "", "back", "/img/back.png", window.history.back())
-const discordServer = navigasiIcon("Discord Invite", discordInvite, "_self", "discord icon", "/img/discord.png")
-
+// Memanggil fungsi navigasiIcon tanpa menyimpan nilai konstan
+navigasiIcon("HOME", myWeb, "_self", "home", "https://lh3.google.com/u/0/d/1B3Len1jZjpxbeMaiI5eNYXO04D330uuB=w1366-h615-iv1",)
+navigasiIcon("Full Screen", "", "", "full screen", "https://lh3.google.com/u/0/d/1riAYAnmB3EKzcI3nXRjQaHLEGVTpBrkm=w534-h615-iv1", openFullScreen)
+navigasiIcon("","","","search","https://lh3.google.com/u/0/d/1VAqxP3Q-4J1hWis6-JegIHtCiQBKzrtO=w1366-h615-iv1",openSearch)
+navigasiIcon("back", "", "", "back", "https://lh3.google.com/u/0/d/1CPM-GvJEQUlfm1bO93ibYhwk19-sfv18=w534-h615-iv1", () => window.history.back())
+navigasiIcon("Discord Invite", discordInvite, "_self", "discord icon", "https://lh3.google.com/u/0/d/1Lo0ikiq7m00fZ2159KCAk2wPZwPSu8fd=w1366-h615-iv1",)
 
 const elem = document.documentElement;
 function openFullScreen() {
@@ -101,10 +100,7 @@ function openFullScreen() {
   } else if (elem.msRequestFullscreen) {
     elem.msRequestFullscreen();
   }
-};
-
-
-
+}
 
 function openSearch() {
   document.getElementById("myOverlay").style.display = "block";
@@ -119,12 +115,12 @@ document.getElementById('searchInput').addEventListener('input', function (event
   const listItems = document.querySelectorAll('#itemList #item');
 
   listItems.forEach(function (item) {
-      const itemText = item.textContent.toLowerCase();
+    const itemText = item.textContent.toLowerCase();
 
-      if (itemText.includes(searchTerm)) {
-          item.style.display = 'block';
-      } else {
-          item.style.display = 'none';
-      }
+    if (itemText.includes(searchTerm)) {
+      item.style.display = 'block';
+    } else {
+      item.style.display = 'none';
+    }
   });
 });
