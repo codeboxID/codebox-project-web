@@ -7,7 +7,7 @@ overlay.id = "myOverlay";
 overlay.className = "overlay";
 document.body.appendChild(overlay)
 
-
+// Mengubah `itemList` menjadi variabel global di luar fungsi
 const itemList = document.createElement("div")
 itemList.className = "itemList"
 itemList.id = "itemList"
@@ -44,7 +44,6 @@ function searchList(itemSearch , description , itemOpen , action){
     });
   }
   item.className = "item"
-  item.onclick = test
   itemList.appendChild(item)
 
   let itemTitle = document.createElement("h3")
@@ -59,11 +58,7 @@ function searchList(itemSearch , description , itemOpen , action){
 }
 
 searchContainer()
-searchList("No post" , "(mohon maaf belum ada apa apa)" , "#" , "_self")
-
-function test() {
-  alert("blum ada apa apa bro jangan di klik")
-};
+searchList("ytdl-core" , "(app)" , "https://codebox.my.id" , "_self")
 
 function navigasiIcon(title, link, action, alt, src, fungsi) {
   let navLinkWithIcon = document.createElement("div")
@@ -90,11 +85,11 @@ const myWeb = "https://codebox.my.id"
 const discordInvite = "https://dc.codebox.my.id/"
 
 // Memanggil fungsi navigasiIcon tanpa menyimpan nilai konstan
-navigasiIcon("HOME", myWeb, "_self", "home", "https://lh3.google.com/u/0/d/1B3Len1jZjpxbeMaiI5eNYXO04D330uuB=w1366-h615-iv1",)
-navigasiIcon("Full Screen", "", "", "full screen", "https://lh3.google.com/u/0/d/1riAYAnmB3EKzcI3nXRjQaHLEGVTpBrkm=w534-h615-iv1", openFullScreen)
-navigasiIcon("","","","search","https://lh3.google.com/u/0/d/1VAqxP3Q-4J1hWis6-JegIHtCiQBKzrtO=w1366-h615-iv1",openSearch)
-navigasiIcon("back", "", "", "back", "https://lh3.google.com/u/0/d/1CPM-GvJEQUlfm1bO93ibYhwk19-sfv18=w534-h615-iv1", () => window.history.back())
-navigasiIcon("Discord Invite", discordInvite, "_self", "discord icon", "https://lh3.google.com/u/0/d/1Lo0ikiq7m00fZ2159KCAk2wPZwPSu8fd=w1366-h615-iv1",)
+navigasiIcon("HOME", myWeb, "_self", "home", "https://img.codebox.my.id/home.png",)
+navigasiIcon("Full Screen", "", "", "full screen", "https://img.codebox.my.id/fullScreen.png", openFullScreen)
+navigasiIcon("","","","search","https://img.codebox.my.id/search.png",openSearch)
+navigasiIcon("back", "", "", "back", "https://img.codebox.my.id/back.png", () => window.history.back())
+navigasiIcon("Discord Invite", discordInvite, "_self", "discord icon", "https://img.codebox.my.id/discord.png",)
 
 const elem = document.documentElement;
 function openFullScreen() {
