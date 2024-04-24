@@ -10,10 +10,9 @@ overlay.id = "myOverlay";
 overlay.className = "overlay";
 document.body.appendChild(overlay)
 
-const itemList = document.createElement("div")
-itemList.className = "itemList"
-itemList.id = "itemList"
-overlay.appendChild(itemList);
+const overlayContent = document.createElement("div")
+overlayContent.className = "overlay-content";
+overlay.appendChild(overlayContent)
 
 function searchContainer() {
   let closeButton = document.createElement("span")
@@ -23,9 +22,10 @@ function searchContainer() {
   closeButton.onclick = closeSearch;
   overlay.appendChild(closeButton);
 
-  let overlayContent = document.createElement("div")
-  overlayContent.className = "overlay-content";
-  overlay.appendChild(overlayContent)
+  let searchTitle = document.createElement("h1")
+  searchTitle.innerText = "Search";
+  searchTitle.className = "searchTitle";
+  overlayContent.appendChild(searchTitle);
 
   let formSearch = document.createElement("form")
   overlayContent.appendChild(formSearch)
@@ -36,6 +36,12 @@ function searchContainer() {
   formInputSearch.placeholder = "search...";
   formSearch.appendChild(formInputSearch)
 }
+
+searchContainer()
+const itemList = document.createElement("div")
+itemList.className = "itemList"
+itemList.id = "itemList"
+overlayContent.appendChild(itemList);
 
 function searchList(itemSearch, description, itemOpen, action) {
   let item = document.createElement("div")
@@ -60,12 +66,15 @@ function searchList(itemSearch, description, itemOpen, action) {
   item.appendChild(itemDescription);
 }
 //isi
-searchContainer()
-searchList("NO POST", "(belum ada apa apa di sini web testing)", "#", "_self")
 
-function noPost() {
-  alert("kaga ada apa-apa bre ga usah di klik")
+searchList("NO POST", "(belum ada apa apa di sini web testing)", "/", "_self")
+
+function noPost(event) {
+  event.preventDefault(); // Mencegah perilaku default
+  alert("kaga ada apa-apa bre ga usah di klik");
 }
+
+
 
 //todo issue coment
 const newIssuesOverlay = document.createElement("div")

@@ -1,157 +1,182 @@
 .icon-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 45px;
-    background-color: #00000073;
-    border-radius: 0px 0px 20px 0px;
-    z-index: 999;
-  }
-
-  @media only screen and (max-width: 550px){
-    .icon-bar {
-      width: 34px;
-    }
-  }
-  
-  .app {
-    margin-left: 50px;
-  }
-  
-  .icon-bar .nav-icon{
-    display: block;
-    text-align: center;
-    padding: 16px;
-    transition: all 0.3s ease;
-    color: rgb(255, 255, 255);
-    font-size: 15px;
-    cursor: pointer;
-  }
-
-  @media only screen and (max-width: 550px){
-    .icon-bar .nav-icon{
-      padding: 10px;
-    }
-  }
-  
-  .icon-bar .nav-icon:hover {
-    background-color: #46464675;
-    border-radius: 0px 20px 20px 0px;
-  }
-  
-  .navicon {
-    width: 16px;
-  }
-
-  @media only screen and (max-width: 550px){
-    .navicon{
-      width: 14px;
-    }
-  }
-
-  .overlay {
-    height: 100%;
-    width: 100%;
-    display: none;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.473);
-  }
-  
-  .overlay-content {
-    position: relative;
-    top: 13%;
-    width: 80%;
-    text-align: center;
-    margin-top: 10px;
-    margin: auto;
-  }
-  
-  .overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 40px;
-    cursor: pointer;
-    border-radius: 100%;
-    -webkit-text-stroke: rgb(255, 255, 255);
-    color: rgb(255, 0, 0);
-  }
-  
-  .overlay .closebtn:hover {
-    color: #ccc;
-  }
-  
-  .overlay input[type=text] {
-    padding: 15px;
-    font-size: 15px;
-    border: none;
-    width: 70%;
-    background: rgb(255, 255, 255);
-  }
-  
-  .overlay input[type=text]:hover {
-    background: #f1f1f1;
-  }
-  
-  .overlay button {
-    float: left;
-    width: 20%;
-    padding: 15px;
-    background: #ddd;
-    font-size: 17px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .overlay button:hover {
-    background: #bbb;
-  }
-
-  input {
-    border-radius: 10px;
-    position: fixed;
-    left: 50%; 
-    transform: translateX(-50%); 
-    top: 10%;
-    margin-top: 20px; 
-    width: 300px;
-  }
-
-  .itemList {
-    margin: 60px;
-    margin-top: 190px;
-    max-height: 450px; 
-    overflow-y: auto;
-  }
-  .item {
-    cursor: pointer;
-    display: block;
-    text-align: left;
-    background-color: #0000008a;
-    border-radius: 5px;
-    border-color: #494949;
-    margin-top: 0px;
-    padding: 15px;
-    border-style: solid;
-    border-width: 1px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 45px;
+  background-color: #00000073;
+  border-radius: 0px 0px 20px 0px;
+  z-index: 999;
 }
 
-.item:hover{
-  background-color: #222a4694;
+@media only screen and (max-width: 550px) {
+  .icon-bar {
+    width: 34px;
+  }
+}
+
+.app {
+  margin-left: 50px;
+}
+
+.icon-bar .nav-icon {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 550px) {
+  .icon-bar .nav-icon {
+    padding: 10px;
+  }
+}
+
+.icon-bar .nav-icon:hover {
+  background-color: #46464675;
+  border-radius: 0px 20px 20px 0px;
+}
+
+.navicon {
+  width: 16px;
+}
+
+@media only screen and (max-width: 550px) {
+  .navicon {
+    width: 14px;
+  }
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.815);
+}
+
+.overlay-content {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  margin-top: 0px;
+  margin: auto;
+  height: 100vh;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 40px;
+  cursor: pointer;
+  border-radius: 100%;
+  -webkit-text-stroke: rgb(255, 255, 255);
+  color: rgb(255, 0, 0);
+}
+
+.overlay .closebtn:hover {
+  color: #ccc;
+}
+
+.overlay input[type=text] {
+  /* padding: 15px; */
+  font-size: 15px;
+  border: none;
+  width: 80%;
+  background: rgb(255, 255, 255);
+}
+
+.overlay input[type=text]:hover {
+  background: #f1f1f1;
+}
+
+.overlay button {
+  float: left;
+  width: 20%;
+  padding: 15px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.overlay button:hover {
+  background: #bbb;
+}
+
+.searchTitle {
+  margin-top: 40px;
+  }
+
+input {
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+
+.itemList {
+  margin: 60px;
+  margin-top: 70px;
+  max-height: 450px;
+  overflow-y: auto;
+  scrollbar-width: none; 
+  -ms-overflow-style: none;
+}
+
+@media only screen and (max-width: 550px) {
+  .itemList {
+    margin: 40px;
+    margin-top: 150px;
+    max-height: 450px;
+    overflow-y: auto;
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
+  }
+}
+
+.itemList::-webkit-scrollbar {
+  display: none; 
+}
+
+.item {
+  cursor: pointer;
+  display: block;
+  text-align: left;
+  background-color: #111111;
+  border-radius: 5px;
+  border-color: #4b4b4b;
+  margin-top: 6px;
+  padding: 18px;
+  border-style: solid;
+  border-width: 0.1px;
+}
+
+.item:hover {
+  background-color: #00000094;
 }
 
 .item-open {
-    margin: 0;
-    text-decoration: none;
+  margin: 0;
+  text-decoration: none;
 }
 
 .description {
-    color: yellow;
-    margin: 0;
-    font-size: 15px;
+  color: yellow;
+  margin: 0;
+  font-size: 15px;
 }
 
 #overlay {
@@ -169,20 +194,26 @@
 }
 
 header {
+  margin-bottom: 20px;
   padding: 20px;
 }
 
 .header-container {
-  text-align: left;
+  text-align: center;
   margin-left: 30px;
-  
+
 }
 
 .header-container button {
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  display: block;
+  width: 100%;
   font-size: 18px;
   color: #fff;
   background-color: #007bff;
-  padding: 8px 22px;
+  padding: 10px;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
@@ -190,6 +221,8 @@ header {
 
 .header-container button:hover {
   background-color: #0056b3;
+  border-style: none;
+  cursor: pointer;
 }
 
 .comment {
@@ -200,7 +233,7 @@ header {
   padding: 15px 20px;
   margin-bottom: 15px;
   word-wrap: break-word;
-  border-radius: 5px; 
+  border-radius: 5px;
   text-align: left;
 }
 
@@ -246,5 +279,5 @@ header {
 
 .closed-status {
   color: #dc3545;
-  font-size: 12px; 
+  font-size: 12px;
 }
