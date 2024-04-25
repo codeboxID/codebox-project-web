@@ -8,7 +8,7 @@
   z-index: 999;
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 780px) {
   .icon-bar {
     width: 34px;
   }
@@ -28,7 +28,7 @@
   cursor: pointer;
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 780px) {
   .icon-bar .nav-icon {
     padding: 10px;
   }
@@ -43,7 +43,7 @@
   width: 16px;
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 780px) {
   .navicon {
     width: 14px;
   }
@@ -136,7 +136,7 @@ input {
   -ms-overflow-style: none;
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 780px) {
   .itemList {
     margin: 40px;
     margin-top: 150px;
@@ -210,6 +210,8 @@ header {
   border-width: 1px;
   display: block;
   width: 100%;
+  height: auto;
+  min-height: 50px;
   font-size: 18px;
   color: #fff;
   background-color: #007bff;
